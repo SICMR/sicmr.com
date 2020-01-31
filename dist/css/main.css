@@ -1,2 +1,76 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
-  background: yellow; }
+  background: #fffaf7; }
+
+nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200; }
+
+#main-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  #main-menu li {
+    position: absolute;
+    font-size: 30px;
+    background-color: aqua;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out; }
+    #main-menu li#nav-shop {
+      top: 0;
+      right: 0;
+      -webkit-transform-origin: bottom;
+              transform-origin: bottom;
+      -webkit-transform: translateY(-100%) rotate(90deg);
+              transform: translateY(-100%) rotate(90deg); }
+      .ani-in #main-menu li#nav-shop {
+        -webkit-transform: translateY(0px) rotate(90deg);
+                transform: translateY(0px) rotate(90deg); }
+    #main-menu li#nav-about {
+      bottom: 0;
+      right: 0;
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-transform: translateX(10px) rotate(180deg);
+              transform: translateX(10px) rotate(180deg); }
+    #main-menu li#nav-contact {
+      bottom: 0;
+      left: 0;
+      -webkit-transform-origin: 0 0;
+              transform-origin: 0 0;
+      -webkit-transform: translateY(35px) rotate(-90deg);
+              transform: translateY(35px) rotate(-90deg); }
+
+#content-container {
+  position: relative;
+  z-index: 100; }
+  #content-container section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    -webkit-transform: translateY(100%) scale(0.01);
+            transform: translateY(100%) scale(0.01);
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out; }
+    #content-container section.active {
+      -webkit-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      display: -webkit-box;
+      display: flex;
+      opacity: 1;
+      -webkit-transform: translateY(0) scale(1);
+              transform: translateY(0) scale(1); }

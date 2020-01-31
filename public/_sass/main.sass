@@ -1,4 +1,59 @@
 @import mixins
-
+*
+  margin: 0
+  padding: 0
 body
-  background: yellow
+  background: #fffaf7
+
+nav
+  position: fixed
+  width: 100vw
+  height: 100vh   
+  z-index: 200
+#main-menu
+  margin: 0
+  padding: 0
+  list-style: none
+  li
+    position: absolute  
+    font-size: 30px
+    background-color: aqua
+    transition: all .2s ease-out
+    &#nav-shop
+      top: 0
+      right: 0
+      transform-origin: bottom
+      transform: translateY(-100%) rotate(90deg)
+      .ani-in &
+          transform: translateY(0px) rotate(90deg)
+    &#nav-about
+      bottom: 0
+      right: 0
+      transform-origin: center
+      transform: translateX(10px) rotate(180deg)      
+    &#nav-contact
+      bottom: 0
+      left: 0    
+      transform-origin: 0 0
+      transform: translateY(35px) rotate(-90deg)
+
+#content-container
+  position: relative
+  z-index: 100
+  section
+    position: absolute
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100vw
+    height: 100vh    
+    opacity: 0
+    transform: translateY(100%) scale(0.01)
+    transition: all 0.4s ease-out
+    &.active
+      transition: all 0.2s ease-out
+      display: flex
+      opacity: 1
+      transform: translateY(0) scale(1)

@@ -13,6 +13,9 @@ var jswrap = require('gulp-js-wrapper');
 var autoprefixer = require('gulp-autoprefixer');
 
 
+var browserSync = require('browser-sync').create();
+var reload  = browserSync.reload;
+
 // LINT JS
 gulp.task('lint', function() {
     return gulp.src('public/_js/*.js')
@@ -27,10 +30,10 @@ gulp.task('sass', function () {
   return gulp.src('public/_sass/*.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions','last 3 iOS versions','> 1%'],
       cascade: true
     }))    
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('dist/css'))
+    .pipe(browserSync.stream());
 });
 
 
@@ -65,10 +68,15 @@ gulp.task('scripts', function() {
 
 // WATCH FILES FOR CHANGES
 gulp.task('watch', function() {
+  browserSync.init({
+    server: {
+        baseDir: "./dist"
+    }
+  });  
   gulp.watch([
         'public/_js/*.js',
         'public/_js/**/*.js',
-    ], gulp.series('lint', 'scripts'));
+    ], gulp.series('lint', 'scripts')).on("change", reload);
   gulp.watch([
         'public/_sass/*.sass',
         'public/_sass/**/*.sass',
