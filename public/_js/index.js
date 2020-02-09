@@ -1,7 +1,10 @@
 $(document).ready(function(){
   setTimeout(function(){
-    $('nav').addClass('ani-in')
-  }, 400)
+    $('body').addClass('ani-in')
+    setTimeout(function(){
+      $('#home').addClass('active')
+    }, 1200);
+  }, 2000)
 
   $('.internal-nav-link').click(function(e){
     e.preventDefault();
