@@ -1,0 +1,53 @@
+$maxlarge: 1600px;
+$xlarge: 1440px;
+$large: 1200px;
+$medium: 1024px;
+$small: 768px;
+$tiny: 480px;
+
+@mixin breakpoint($point) {
+  @if $point == maxlarge {
+    @media (max-width: $maxlarge - 1px) {
+      @content;
+    }
+  } @else if $point == xlarge {
+    @media (max-width: $xlarge - 1px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (max-width: $large - 1px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (max-width: $medium - 1px) {
+      @content;
+    }
+  } @else if $point == mediumup {
+    @media (min-width: $medium) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (max-width: $small - 1px) {
+      @content;
+    }
+  } @else if $point == smallup {
+    @media (min-width: $small) {
+      @content;
+    }
+  } @else if $point == tiny {
+    @media (max-width: $tiny - 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin max-1600 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 40px;
+
+  @include breakpoint(small) {
+    padding: 0 20px;
+  }
+}

@@ -1,21 +1,22 @@
 {
-  "name": "simple starter pack",
+  "name": "SICMR",
   "version": "1.0.0",
   "description": "Real Simple",
   "author": "Brendan",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.5",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-js-wrapper": "0.0.3",
+    "gulp-js-wrapper": "^0.0.3",
     "gulp-jshint": "^2.1.0",
     "gulp-minify": "^3.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",
-    "jshint": "^2.11.0"
+    "jshint": "^2.13.1",
+    "node-sass": "^6.0.1"
   }
 }

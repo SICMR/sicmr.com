@@ -1,0 +1,47 @@
+@import 'reset';
+@import 'mixins';
+
+body {
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter';
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+article {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  .logo {
+    width: 60%;
+    text-align: center;
+    svg {
+      display: block;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    .info {
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+      letter-spacing: 0.1em;
+      @include breakpoint(small) {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      .info {
+        opacity: 1;
+      }
+    }
+  }
+}

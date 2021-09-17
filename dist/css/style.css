@@ -1,0 +1,145 @@
+/*  
+	CSS Reset by Eric Meyer - Released under Public Domain
+    http://meyerweb.com/eric/tools/css/reset/
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+:focus {
+  outline: 0; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+figure {
+  margin: 0; }
+
+body {
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter';
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  color: blue; }
+  a:hover {
+    text-decoration: underline; }
+
+article {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px; }
+  article .logo {
+    width: 60%;
+    text-align: center; }
+    article .logo svg {
+      display: block;
+      width: 100%;
+      margin-bottom: 50px; }
+    article .logo .info {
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+      letter-spacing: 0.1em; }
+      @media (max-width: 767px) {
+        article .logo .info {
+          opacity: 1; } }
+    article .logo:hover .info {
+      opacity: 1; }
