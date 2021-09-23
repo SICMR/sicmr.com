@@ -114,7 +114,7 @@ body {
   font-weight: bold; }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: blue; }
   a:hover {
     text-decoration: underline; }
@@ -128,18 +128,40 @@ article {
   flex-wrap: wrap;
   padding: 20px; }
   article .logo {
-    width: 60%;
-    text-align: center; }
+    width: 36%;
+    text-align: center;
+    cursor: pointer; }
+    @media (max-width: 767px) {
+      article .logo {
+        width: 70%; } }
     article .logo svg {
       display: block;
       width: 100%;
-      margin-bottom: 50px; }
+      margin-bottom: 8%; }
     article .logo .info {
-      opacity: 0;
+      opacity: 1;
       transition: opacity 0.5s ease-in;
-      letter-spacing: 0.1em; }
+      margin-bottom: 20%;
+      font-size: 1.25vw;
+      letter-spacing: 0.16em; }
+      article .logo .info a {
+        margin-left: -10%; }
       @media (max-width: 767px) {
         article .logo .info {
-          opacity: 1; } }
-    article .logo:hover .info {
-      opacity: 1; }
+          opacity: 1;
+          font-size: 3vw;
+          margin-bottom: 60%; }
+          article .logo .info a {
+            margin-left: 0; } }
+      article .logo .info.hide {
+        opacity: 0;
+        pointer-events: none; }
+
+.design {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid red;
+  opacity: 0.2; }
