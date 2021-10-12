@@ -145,12 +145,12 @@ article {
       font-size: 1.25vw;
       letter-spacing: 0.16em; }
       article .logo .info a {
-        margin-left: -10%; }
+        margin-left: 0; }
       @media (max-width: 767px) {
         article .logo .info {
           opacity: 1;
           font-size: 3vw;
-          margin-bottom: 60%; }
+          margin-bottom: 80%; }
           article .logo .info a {
             margin-left: 0; } }
       article .logo .info.hide {

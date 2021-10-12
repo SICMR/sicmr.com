@@ -41,12 +41,12 @@ article {
       font-size: 1.25vw;
       letter-spacing: 0.16em;
       a {
-        margin-left: -10%;
+        margin-left: 0;
       }
       @include breakpoint(small) {
         opacity: 1;
         font-size: 3vw;
-        margin-bottom: 60%;
+        margin-bottom: 80%;
         a {
           margin-left: 0;
         }

@@ -57,10 +57,17 @@
   <script>
     var sicmr = document.getElementById('sicmr');
     var info = document.getElementById('info');
+    var hideTimeout = null;
     if (sicmr) {
       sicmr.addEventListener('click', function(){
+        if (hideTimeout) {
+          clearTimeout(hideTimeout)
+        }        
         if(info) {
           info.classList.remove('hide');
+          hideTimeout = setTimeout(function(){
+            info.classList.add('hide');
+          }, 3000)
         }
       });
     }
