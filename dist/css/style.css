@@ -140,7 +140,7 @@ article {
       margin-bottom: 8%; }
     article .logo .info {
       opacity: 1;
-      transition: opacity 2s ease-in;
+      transition: opacity 0.5s ease-in;
       margin-bottom: 20%;
       font-size: 1.25vw;
       letter-spacing: 0.16em; }
@@ -154,6 +154,7 @@ article {
           article .logo .info a {
             margin-left: 0; } }
       article .logo .info.hide {
+        transition: opacity 2s ease-in;
         opacity: 0;
         pointer-events: none; }
 
